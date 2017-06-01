@@ -22,57 +22,70 @@ namespace MissingNo_Name_Checker
     /// </summary>
     public partial class MainWindow : Window
     {
-        string[] nameInput = new string[7];
+        char[] nameInput = new char[7];
         public MainWindow()
         {
             InitializeComponent();
         }
 
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            userNameInput.MaxLength = 7;
+        }
+
+        private void userNameInput_GotFocus(object sender, RoutedEventArgs e)
+        {
+            userNameInput.Text = "";
+        }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            nameInput[0] = userName.Text;
-            nameInput[1] = userName_Copy.Text;
-            nameInput[2] = userName_Copy1.Text;
-            nameInput[3] = userName_Copy2.Text;
-            nameInput[4] = userName_Copy3.Text;
-            nameInput[5] = userName_Copy4.Text;
-            nameInput[6] = userName_Copy5.Text;
-
-            //just for testing
-            //tblkResult.Text = string.Format("{0}, {1}, {2}, {3}, {4}, {5}, {6}", nameInput[0], nameInput[1], nameInput[2], nameInput[3], nameInput[4], nameInput[5], nameInput[6]);
+            nameInput = userNameInput.Text.ToCharArray();
+            
+            tblkResult.Text = "";
 
             try
             {
                 using (StreamReader sr = new StreamReader("levelList.txt"))
                 {
-                    //i += 2 to get to next part for array
-                    for (int i = 1; i < nameInput.Length; i += 2)
-                    {
-                        //next line
-                        string contents = sr.ReadLine();
-                        while (contents != null)
-                        {
-                            //get level that goes with letter
-                            string[] newLevel = contents.Split(',');
-                            string levelDisplay = newLevel[1];
+                    const int LEVELSEARCH = 1;
+                    SearchFiles(sr, LEVELSEARCH);
+                }
 
-                            if (newLevel[0] == nameInput[i])
-                            {
-                                Trace.Write(levelDisplay);
-                                tblkResult.Text += levelDisplay.ToString(); //so I can see what's happening
-                                newLevel = null;
-                                sr.DiscardBufferedData();
-                                sr.BaseStream.Seek(0, SeekOrigin.Begin);
-                                break;
-                            }
-                            contents = sr.ReadLine();
-                        }
-                    }
+                using (StreamReader sr = new StreamReader("pokemonList.txt"))
+                {
+                    const int POKEMONSEARCH = 2;
+                    SearchFiles(sr, POKEMONSEARCH);
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void SearchFiles(StreamReader sr, int SEARCHBY)
+        {
+            for (int i = SEARCHBY; i < nameInput.Length; i += 2)
+            {
+                //next line
+                string contents = sr.ReadLine();
+                while (contents != null)
+                {
+                    //get level that goes with letter
+                    string[] newLevel = contents.Split(',');
+                    string levelDisplay = newLevel[1];
+
+                    if (newLevel[0] == nameInput[i].ToString())
+                    {
+                        tblkResult.Text += levelDisplay.ToString();
+                        newLevel = null;
+                        sr.DiscardBufferedData();
+                        sr.BaseStream.Seek(0, SeekOrigin.Begin);
+                        break;
+                    }
+                    contents = sr.ReadLine();
+                }
             }
         }
     }
