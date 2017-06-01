@@ -8,13 +8,13 @@
         Title="MissingNo Name Checker" Height="350" Width="525">
     <Grid>
         <TextBox Name="userName" HorizontalAlignment="Left" Height="23" Margin="165,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="28"/>
-        <Label Content="Enter Your Name" HorizontalAlignment="Left" Margin="43,54,0,0" VerticalAlignment="Top"/>
+        <Label Content="Enter Your Name:" HorizontalAlignment="Left" Margin="43,54,0,0" VerticalAlignment="Top"/>
         <TextBlock Name="tblkResult" Height="50" Margin="113,218,110,51"/>
-        <TextBox x:Name="userName_Copy" HorizontalAlignment="Left" Height="23" Margin="198,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="28"/>
+        <TextBox x:Name="userName_Copy" HorizontalAlignment="Left" Height="23" Margin="198,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="28"/>
         <TextBox x:Name="userName_Copy1" HorizontalAlignment="Left" Height="23" Margin="231,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="28"/>
-        <TextBox x:Name="userName_Copy2" HorizontalAlignment="Left" Height="23" Margin="264,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="28"/>
+        <TextBox x:Name="userName_Copy2" HorizontalAlignment="Left" Height="23" Margin="264,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="28"/>
         <TextBox x:Name="userName_Copy3" HorizontalAlignment="Left" Height="23" Margin="297,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="28"/>
-        <TextBox x:Name="userName_Copy4" HorizontalAlignment="Left" Height="23" Margin="330,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="28"/>
+        <TextBox x:Name="userName_Copy4" HorizontalAlignment="Left" Height="23" Margin="330,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="28"/>
         <TextBox x:Name="userName_Copy5" HorizontalAlignment="Left" Height="23" Margin="363,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="28"/>
         <Button Content="Generate" HorizontalAlignment="Left" Margin="204,124,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
 

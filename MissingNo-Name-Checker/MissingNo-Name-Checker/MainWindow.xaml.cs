@@ -39,7 +39,7 @@ namespace MissingNo_Name_Checker
             nameInput[6] = userName_Copy5.Text;
 
             //just for testing
-            tblkResult.Text = string.Format("{0}, {1}, {2}, {3}, {4}, {5}, {6}", nameInput[0], nameInput[1], nameInput[2], nameInput[3], nameInput[4], nameInput[5], nameInput[6]);
+            //tblkResult.Text = string.Format("{0}, {1}, {2}, {3}, {4}, {5}, {6}", nameInput[0], nameInput[1], nameInput[2], nameInput[3], nameInput[4], nameInput[5], nameInput[6]);
 
             try
             {
@@ -61,8 +61,9 @@ namespace MissingNo_Name_Checker
                                 Trace.Write(levelDisplay);
                                 tblkResult.Text += levelDisplay.ToString(); //so I can see what's happening
                                 newLevel = null;
-                                //this only works with alphabetical names for now, will fix
-                                i += 2;
+                                sr.DiscardBufferedData();
+                                sr.BaseStream.Seek(0, SeekOrigin.Begin);
+                                break;
                             }
                             contents = sr.ReadLine();
                         }
