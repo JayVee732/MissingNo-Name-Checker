@@ -14,8 +14,8 @@
         <Button Name="btnGenerate" Content="Generate" HorizontalAlignment="Left" Margin="226,124,0,0" VerticalAlignment="Top" Width="75" Click="btnGenerate_Click" IsDefault="True"/>
         <TextBlock Name="tblkPokemon" Margin="167,163,260,51"/>
         <TextBlock Name="tblkLevel" Margin="262,163,165,51"/>
-        <Button Name="PKButton" Content="PK" HorizontalAlignment="Left" Margin="172,85,0,0" VerticalAlignment="Top" Width="75" Click="PKButton_Click"/>
-        <Button Name="MNButton" Content="MN" HorizontalAlignment="Left" Margin="277,85,0,0" VerticalAlignment="Top" Width="75" Click="MNButton_Click"/>
+        <Button Name="btn_PK" Content="PK" HorizontalAlignment="Left" Margin="172,85,0,0" VerticalAlignment="Top" Width="75" Click="btn_PK_Click"/>
+        <Button Name="btn_MN" Content="MN" HorizontalAlignment="Left" Margin="277,85,0,0" VerticalAlignment="Top" Width="75" Click="btn_MN_Click"/>
         <Button Name="btnHelp" Content="Help" HorizontalAlignment="Left" Margin="432,10,0,0" VerticalAlignment="Top" Width="75" Click="btnHelp_Click"/>
         <Label Content="Created by Jamie Higgins, 2017" HorizontalAlignment="Left" Margin="335,283,0,0" VerticalAlignment="Top" Width="182"/>
 

@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -81,11 +82,27 @@ namespace MissingNo_Name_Checker
                     }
                 }
             }
+
+            ValidateUsername();
+
             //Textbox is converted to char array
-            nameArray = userNameInput.Text.ToCharArray();
             //Cleared if there was a previous search
             tblkLevel.Text = "";
             tblkPokemon.Text = "";
+        }
+
+        private void ValidateUsername()
+        {
+            Regex regex = new Regex(@"^[a-zA-Z\s\#\\\-\?\!\*\.\/]{1,7}$");
+            Match match = regex.Match(userNameInput.Text);
+            if (match.Success)
+            {
+                nameArray = userNameInput.Text.ToCharArray();
+            }
+            else
+            {
+                MessageBox.Show("Invalid characters where found in your username, please try again!");
+            }
         }
 
         private void SearchFiles(StreamReader sr, int SEARCH_BY)
@@ -123,8 +140,8 @@ namespace MissingNo_Name_Checker
                 }
             }
         }
-#region Additional Buttons
-        private void PKButton_Click(object sender, RoutedEventArgs e)
+        #region Additional Buttons
+        private void btn_PK_Click(object sender, RoutedEventArgs e)
         {
             if (userNameInput.Text.Length < userNameInput.MaxLength)
             {
@@ -132,7 +149,7 @@ namespace MissingNo_Name_Checker
             }
         }
 
-        private void MNButton_Click(object sender, RoutedEventArgs e)
+        private void btn_MN_Click(object sender, RoutedEventArgs e)
         {
             if (userNameInput.Text.Length < userNameInput.MaxLength)
             {
