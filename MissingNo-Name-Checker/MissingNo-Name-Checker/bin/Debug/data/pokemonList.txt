@@ -1,3 +1,4 @@
+﻿ |MissingNo.
 A|Golduck
 B|Hypno
 C|Golbat
@@ -24,6 +25,12 @@ W|Pidgeotto
 X|Pidgeot
 Y|Starmie
 Z|Bulbasaur
+(|Venusaur
+)|Tentacruel
+:|MissingNo.
+;|Goldeen
+[|Seaking
+]|MissingNo.
 a|MissingNo.
 b|MissingNo.
 c|MissingNo.
@@ -46,23 +53,18 @@ s|Charmeleon
 t|Wartortle
 u|Charizard
 v|MissingNo.
-w|MissingNo.
-x|MissingNo.
-y|MissingNo.
+w|MissingNo. (Kabutops Fossil form)
+x|MissingNo. (Aerodactyl Fossil form)
+y|MissingNo. (Ghost form)
 z|Oddish
- |MissingNo.
-(|Venusaur
-)|Tentacruel
-;|Goldeen
-[|Seaking
-#|Gary 1
-!|Cooltrainer M
+#|Rival Blue
+\|Professor Oak
 -|Chief
 ?|Rocket
-\|Professor Oak
-.|Gary 2
+!|Cooltrainer 
+♂|Blaine
 *|Gentleman
-/|Gary 3
+.|Rival Blue
+/|Champion Blue
 ,|Lorelei
-]|MissingNo.
-:|MissingNo.
+♀|Channeler

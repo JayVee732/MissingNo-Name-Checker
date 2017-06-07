@@ -1,20 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace MissingNo_Name_Checker
 {
@@ -49,14 +36,14 @@ namespace MissingNo_Name_Checker
             try
             {
                 //2 Different files are used
-                using (StreamReader sr = new StreamReader("levelList.txt"))
+                using (StreamReader sr = new StreamReader("data/levelList.txt"))
                 {
                     //const value used as it will never change
                     const int LEVEL_SEARCH = 1;
                     SearchFiles(sr, LEVEL_SEARCH);
                 }
 
-                using (StreamReader sr = new StreamReader("pokemonList.txt"))
+                using (StreamReader sr = new StreamReader("data/pokemonList.txt"))
                 {
                     const int POKEMON_SEARCH = 2;
                     SearchFiles(sr, POKEMON_SEARCH);
@@ -93,7 +80,7 @@ namespace MissingNo_Name_Checker
 
         private void ValidateUsername()
         {
-            Regex regex = new Regex(@"^[a-zA-Z\s\#\\\-\?\!\*\.\/]{1,7}$");
+            Regex regex = new Regex(@"^[a-zA-Z\s\#\\\-\?\!\*\.\/\♀\♂]{1,7}$");
             Match match = regex.Match(userNameInput.Text);
             if (match.Success)
             {
