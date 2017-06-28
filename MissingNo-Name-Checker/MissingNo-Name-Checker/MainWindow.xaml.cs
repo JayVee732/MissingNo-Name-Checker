@@ -56,6 +56,7 @@ namespace MissingNo_Name_Checker
             }
         }
 
+        //Adds more spacing to the end of the characters name, the games did that same thing
         private void AddValuesToArray()
         {
             if (userNameInput.Text.Length < userNameInput.MaxLength)
@@ -65,25 +66,28 @@ namespace MissingNo_Name_Checker
                     userNameInput.Text += " ";
                     if (userNameInput.Text.Length == userNameInput.MaxLength)
                     {
+                        //Leave the loop
                         break;
                     }
                 }
             }
 
             ValidateUsername();
-
-            //Textbox is converted to char array
+            
             //Cleared if there was a previous search
             tblkLevel.Text = "";
             tblkPokemon.Text = "";
         }
 
+        //Validate the user input
         private void ValidateUsername()
         {
+            //Regex that should cover all name combinations
             Regex regex = new Regex(@"^[a-zA-Z\s\#\\\-\?\!\*\.\/\♀\♂]{1,7}$");
             Match match = regex.Match(userNameInput.Text);
             if (match.Success)
             {
+                //Stores the result
                 nameArray = userNameInput.Text.ToCharArray();
             }
             else
@@ -110,11 +114,11 @@ namespace MissingNo_Name_Checker
                         //Appends to textbox depending on if it's the level or Pokemon file
                         if (SEARCH_BY == 2)
                         {
-                            tblkPokemon.Text += String.Format("\n{0}", checkLine.ToString());
+                            tblkPokemon.Text += $"\n{checkLine}";
                         }
                         else
                         {
-                            tblkLevel.Text += String.Format("\n{0}", checkLine.ToString());
+                            tblkLevel.Text += $"\n{checkLine}";
                         }
                         newLine = null;
                         //Starts reading the text file from the start for the next character
@@ -128,6 +132,9 @@ namespace MissingNo_Name_Checker
             }
         }
         #region Additional Buttons
+        /* Each of these buttons are to represent the PK and MN characters
+         * from the game, since they're not real characters, I used # and \
+         * instead*/
         private void btn_PK_Click(object sender, RoutedEventArgs e)
         {
             if (userNameInput.Text.Length < userNameInput.MaxLength)
@@ -143,6 +150,8 @@ namespace MissingNo_Name_Checker
                 userNameInput.Text += "\\";
             }
         }
+
+        //Needs more info, works for now
         private void btnHelp_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Hi there, and thanks for using this program! ^_^" +
