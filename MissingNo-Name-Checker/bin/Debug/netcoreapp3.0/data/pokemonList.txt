@@ -1,0 +1,70 @@
+﻿ |MissingNo.
+A|Golduck
+B|Hypno
+C|Golbat
+D|Mewtwo
+E|Snorlax
+F|Magikarp
+G|MissingNo.
+H|MissingNo.
+I|Muk
+J|MissingNo.
+K|Kingler
+L|Cloyster
+M|MissingNo.
+N|Electrode
+O|Clefable
+P|Weezing
+Q|Persian
+R|Marowak
+S|MissingNo.
+T|Haunter
+U|Abra
+V|Alakazam
+W|Pidgeotto
+X|Pidgeot
+Y|Starmie
+Z|Bulbasaur
+(|Venusaur
+)|Tentacruel
+:|MissingNo.
+;|Goldeen
+[|Seaking
+]|MissingNo.
+a|MissingNo.
+b|MissingNo.
+c|MissingNo.
+d|Ponyta
+e|Rapidash
+f|Rattata
+g|Raticate
+h|Nidorino
+i|Nidorina
+j|Geodude
+k|Porygon
+l|Aerodactyl
+m|MissingNo.
+n|Magnemite
+o|MissingNo.
+p|MissingNo.
+q|Charmander
+r|Squirtle 
+s|Charmeleon
+t|Wartortle
+u|Charizard
+v|MissingNo.
+w|MissingNo. (Kabutops Fossil form)
+x|MissingNo. (Aerodactyl Fossil form)
+y|MissingNo. (Ghost form)
+z|Oddish
+#|Rival Blue
+\|Professor Oak
+-|Chief
+?|Rocket
+!|Cooltrainer 
+♂|Blaine
+*|Gentleman
+.|Rival Blue
+/|Champion Blue
+,|Lorelei
+♀|Channeler

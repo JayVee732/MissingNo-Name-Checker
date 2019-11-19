@@ -1,0 +1,23 @@
+﻿<Window x:Class="MissingNo_Name_Checker.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MissingNo_Name_Checker"
+        mc:Ignorable="d"
+        Title="MissingNo. Name Checker" Height="350" Width="525" Loaded="Window_Loaded">
+    <Grid>
+        <Label Content="Enter Your Name:" HorizontalAlignment="Left" Margin="43,54,0,0" VerticalAlignment="Top"/>
+        <Label Content="MissingNo. Name Checker" FontWeight="ExtraBold" HorizontalAlignment="Left" Margin="172,10,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="userNameInput" HorizontalAlignment="Left" Height="23" Margin="172,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" GotFocus="userNameInput_GotFocus"/>
+
+        <Button Name="btnGenerate" Content="Generate" HorizontalAlignment="Left" Margin="226,124,0,0" VerticalAlignment="Top" Width="75" Click="btnGenerate_Click" IsDefault="True"/>
+        <TextBlock Name="tblkPokemon" Margin="167,163,260,51"/>
+        <TextBlock Name="tblkLevel" Margin="262,163,165,51"/>
+        <Button Name="btn_PK" Content="PK" HorizontalAlignment="Left" Margin="172,85,0,0" VerticalAlignment="Top" Width="75" Click="btn_PK_Click"/>
+        <Button Name="btn_MN" Content="MN" HorizontalAlignment="Left" Margin="277,85,0,0" VerticalAlignment="Top" Width="75" Click="btn_MN_Click"/>
+        <Button Name="btnHelp" Content="Help" HorizontalAlignment="Left" Margin="432,10,0,0" VerticalAlignment="Top" Width="75" Click="btnHelp_Click"/>
+        <Label Content="Created by Jamie Higgins, 2017" HorizontalAlignment="Left" Margin="335,283,0,0" VerticalAlignment="Top" Width="182"/>
+
+    </Grid>
+</Window>
